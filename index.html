@@ -4,6 +4,12 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+  <style>
+    .done-true{
+      text-decoration: line-through;
+      color: gray;
+    }
+  </style>
   <script src="app.js"></script>
   <title>Todo Example</title>
 </head>
@@ -12,6 +18,14 @@
   <h1>Todo Example Client Side Only</h1>
   <div ng-controller="TodoController">
     <h2> Total todos: {{getTotalTodos()}} </h2>
+
+    <ul style="list-style-type: none;">
+      <li ng-repeat="todo in todos">
+        <input type="checkbox" ng-model="todo.done"> <!--Two way binding -->
+        <span class="done-{{todo.done}}">{{todo.text}}</span>
+      </li>
+    </ul>
+
   </div>
 </div>
 </body>
