@@ -19,6 +19,14 @@
   <div ng-controller="TodoController">
     <h2> Total todos: {{getTotalTodos()}} </h2>
 
+    <div class="form-group">
+      <form class="form-horizontal">
+        <label for="todoText">Text for new Todo</label>
+        <input type="text" ng-model="formTodoText" id="todoText">
+        <button class="button" ng-click="addTodo()"><span class="glyphicon glyphicon-plus"></span>Add</button>
+      </form>
+    </div>
+
     <ul style="list-style-type: none;">
       <li ng-repeat="todo in todos">
         <input type="checkbox" ng-model="todo.done"> <!--Two way binding -->
