@@ -2,5 +2,18 @@ var app = angular.module('todoApp',[]);
 
 
 app.controller("TodoController",function($scope) {
-  $scope.totalTodos = 15;
+
+
+  $scope.todos = [
+    {text : 'Learn AngularJS',done  : false}
+    ,{text : "Learn the basics",done : false}
+    ,{text : "Complete all the exercises",done: false}
+  ];
+  $scope.getTotalTodos = function(){
+    return $scope.todos.length;
+  }
+
+
+
+
 });
