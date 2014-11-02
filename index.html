@@ -27,6 +27,10 @@
       </form>
     </div>
 
+    <div class="form-group">
+      <button ng-click="clearCompleted()"><span class="glyphicon glyphicon-trash"></span>Remove Completed</button>
+    </div>
+
     <ul style="list-style-type: none;">
       <li ng-repeat="todo in todos">
         <input type="checkbox" ng-model="todo.done"> <!--Two way binding -->
