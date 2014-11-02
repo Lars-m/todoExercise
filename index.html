@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="todoApp">
 <head lang="en">
   <meta charset="UTF-8">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -8,8 +8,11 @@
   <title>Todo Example</title>
 </head>
 <body>
-<div class="container">
+<div class="container" class="container">
   <h1>Todo Example Client Side Only</h1>
+  <div ng-controller="TodoController">
+    {{totalTodos}}
+  </div>
 </div>
 </body>
 </html>
